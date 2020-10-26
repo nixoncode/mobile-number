@@ -1,0 +1,13 @@
+{
+    "name": "nixon/mobile-number",
+    "description": "Parse Mobile number filters and validates kenyan numbers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nixon Kosgei",
+            "email": "nkosgey6@gmail.com"
+        }
+    ],
+    "require": {}
+}
