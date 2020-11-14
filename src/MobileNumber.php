@@ -147,7 +147,6 @@ class MobileNumber
                     return $phoneNumber;
                 }
                 return null;
-                break;
             case 10:
                 if (substr($phoneNumber, 0, 2) == "07" || substr($phoneNumber, 0, 2) == "01") {
                     $sanitized = (float)$phoneNumber; // drops the leading 0
@@ -155,13 +154,11 @@ class MobileNumber
                     return $sanitized;
                 }
                 return null;
-                break;
             case 9:
                 if (substr($phoneNumber, 0, 1) == "7" || substr($phoneNumber, 0, 1) == "1") {
                     return ("254" . $phoneNumber);
                 }
                 return null;
-                break;
             default:
                 return null;
         }
