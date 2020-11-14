@@ -1,5 +1,5 @@
 {
-    "name": "nixon/mobile-number",
+    "name": "nixoncode/mobile-number",
     "description": "Parse Mobile number filters and validates kenyan numbers",
     "type": "library",
     "license": "MIT",
