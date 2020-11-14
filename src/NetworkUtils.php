@@ -48,5 +48,23 @@ class NetworkUtils
         return array_search($netName, self::$networks);
     }
     
-    
+    /**
+     * Get the opt-out for a sender id
+     *
+     * @param string $networkName
+     * @param string $senderName
+     * @return string optout for the given network with line break included
+     */
+    public static function getOptOut($networkName, $senderName = null)
+    {
+        switch ($networkName) {
+            case self::NETWORK_SAF:
+                return "\nSTOP *456*9*5#";
+            case self::NETWORK_AIRTEL:
+                //TODO add sender name
+                return "\nSTOP TO 20133";
+            default:
+                return '';
+        }
+    }
 }
