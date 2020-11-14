@@ -49,11 +49,11 @@ class NetworkUtils
     }
     
     /**
-     * Get the opt-out for a sender id
+     * Get the opt-out for a given sender id
      *
      * @param string $networkName
      * @param string $senderName
-     * @return string optout for the given network with line break included
+     * @return string opt out for the given network with line break included
      */
     public static function getOptOut($networkName, $senderName = null)
     {
