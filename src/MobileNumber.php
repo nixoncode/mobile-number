@@ -9,7 +9,6 @@
 namespace Nixon\MobileNumber;
 
 
-
 use function array_push;
 use function in_array;
 use function preg_replace;
@@ -79,8 +78,10 @@ class MobileNumber
         
         
         // recent 01 prefixes
-        array_push($safaricomPrefixes, 110);
-        array_push($safaricomPrefixes, 111);
+        for ($i = 0; $i < 6; $i++) {
+            $safaricomPrefixes[] = (int)"11" . $i;
+        }
+        
         return $safaricomPrefixes;
     }
     
@@ -104,9 +105,9 @@ class MobileNumber
         array_push($airtelPrefixes, 762);
         
         // new prefixes
-        array_push($airtelPrefixes, 100);
-        array_push($airtelPrefixes, 101);
-        array_push($airtelPrefixes, 102);
+        for ($i = 0; $i < 7; $i++) { // 100 -> 106
+            $airtelPrefixes[] = (int)("10" . $i);
+        }
         return $airtelPrefixes;
     }
     
