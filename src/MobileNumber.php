@@ -9,7 +9,6 @@
 namespace Nixon\MobileNumber;
 
 
-use function array_push;
 use function in_array;
 use function preg_replace;
 use function strlen;
@@ -47,34 +46,34 @@ class MobileNumber
         $safaricomPrefixes = [];
         
         for ($i = 0; $i < 10; $i++) { //0700 -> 0709
-            array_push($safaricomPrefixes, (int)("70" . $i));
+            $safaricomPrefixes[]= (int)("70" . $i);
         }
         for ($i = 0; $i < 10; $i++) { //0710 -> 0719
-            array_push($safaricomPrefixes, (int)("71" . $i));
+            $safaricomPrefixes[]= (int)("71" . $i);
         }
         for ($i = 0; $i < 10; $i++) { //0720 -> 0729
-            array_push($safaricomPrefixes, (int)("72" . $i));
+            $safaricomPrefixes[]= (int)("72" . $i);
         }
         
         for ($i = 0; $i < 10; $i++) { //0790 -> 0799
-            array_push($safaricomPrefixes, (int)("79" . $i));
+            $safaricomPrefixes[]= (int)("79" . $i);
         }
         
         for ($i = 0; $i < 10; $i++) { //0740 -> 0749
             if ($i == 4 || $i == 7 || $i == 9) { // skip 0744, 0747, 0749
                 continue;
             }
-            array_push($safaricomPrefixes, (int)("74" . $i));
+            $safaricomPrefixes[]= (int)("74" . $i);
         }
         
         // for 075*
-        array_push($safaricomPrefixes, 757);
-        array_push($safaricomPrefixes, 758);
-        array_push($safaricomPrefixes, 759);
+        $safaricomPrefixes[]= 757;
+        $safaricomPrefixes[]= 758;
+        $safaricomPrefixes[]= 759;
         
         // 076*
-        array_push($safaricomPrefixes, 768);
-        array_push($safaricomPrefixes, 769);
+        $safaricomPrefixes[] =768;
+        $safaricomPrefixes[]= 769;
         
         
         // recent 01 prefixes
@@ -90,19 +89,19 @@ class MobileNumber
         $airtelPrefixes = [];
         
         for ($i = 0; $i < 10; $i++) { //0730 -> 0739
-            array_push($airtelPrefixes, (int)("73" . $i));
+            $airtelPrefixes[] = (int)("73" . $i);
         }
         
         for ($i = 0; $i < 7; $i++) { //0750 -> 0756
-            array_push($airtelPrefixes, (int)("75" . $i));
+            $airtelPrefixes[] = (int)("75" . $i);
         }
         
         
         for ($i = 0; $i < 10; $i++) { //0780 -> 0789
-            array_push($airtelPrefixes, (int)("78" . $i));
+            $airtelPrefixes[] = (int)("78" . $i);
         }
         
-        array_push($airtelPrefixes, 762);
+        $airtelPrefixes[]= 762;
         
         // new prefixes
         for ($i = 0; $i < 7; $i++) { // 100 -> 106
@@ -115,7 +114,7 @@ class MobileNumber
     {
         $telkomPrefixes = [];
         for ($i = 0; $i < 10; $i++) { //0770 -> 0779
-            array_push($telkomPrefixes, (int)("77" . $i));
+            $telkomPrefixes[] = (int)("77" . $i);
         }
         
         return $telkomPrefixes;
@@ -125,9 +124,9 @@ class MobileNumber
     {
         $equitelPrefix = [];
         
-        array_push($equitelPrefix, 763);
-        array_push($equitelPrefix, 764);
-        array_push($equitelPrefix, 765);
+        $equitelPrefix[] = 763;
+        $equitelPrefix[] = 764;
+        $equitelPrefix[] = 765;
         
         return $equitelPrefix;
     }
